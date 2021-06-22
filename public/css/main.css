@@ -9,6 +9,16 @@ body{
     max-width: 800px;
 }
 
+.banner{
+    background: #FAAE2B; 
+    border: 1px solid black; 
+    box-shadow: 7px 5px #888888; 
+    padding-right: 10px; 
+    padding-left: 10px; 
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+
 @font-face {
   font-family: meslo;
   src: url(../font/mesloregular.ttf);
