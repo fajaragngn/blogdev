@@ -1,1 +1,1 @@
-[spacedev.netlify.app](https://spacedev.netlify.app) |
+[spacedev.netlify.app](https://spacedev.netlify.app)
