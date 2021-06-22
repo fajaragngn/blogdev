@@ -8,7 +8,7 @@
             <ul>
                 {{ range (where .Site.RegularPages "Section" "dev") }}
                      <li>
-                       <a href="{{.Permalink}}"> {{.Title}} </a>
+                       <a href="{{.Permalink}}"> {{.Title}} </a><br>
                        <span> {{.Date.Format "2006-01-02"}} </span>
                    </li>
                {{ end }}
