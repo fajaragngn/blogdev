@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>  </title>
+    <meta name="description" content="Menulis dengan ☕️" property="og:description">
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@fajaragngn" />
+    <meta name="twitter:creator" content="@fajaragngn" />
+
+    <meta name="twitter:title" content=" | @fajaragngn ">
+    <meta name="twitter:url" content="https://fajarr.space/search/">
+    <meta name="twitter:description" content="Menulis dengan ☕️">
+    <meta name="twitter:image:src" content="https://fajarr.space/img/featured-img/writer.jpg" />
+
+    <meta property="og:url" content="https://fajarr.space/search/" />
+    <meta property="og:title" content=" | @fajaragngn " />
+    <meta property="og:description" content="Menulis dengan ☕️" />
+    <meta property="og:image" content="https://fajarr.space/img/featured-img/writer.jpg" />
+
+        <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98864351-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-98864351-2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+	<div>
+		<a href="/">fajarr.space</a>
+	</div>
+	  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+        <a>🦇dark/</a>
+      </div>
+    <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+      <a>/light💡</a>
+    </div>
+  </div>
+
+    <script>
+        
+        if(localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true)
+        }
+
+        function setDarkMode(isDark) {
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+
+            if(isDark) {
+                lightBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme', 'dark');
+            } else {
+                lightBtn.style.display = "none"
+                darkBtn.style.display = "block"
+                localStorage.removeItem('preferredTheme');
+            }
+
+            document.body.classList.toggle("darkmode");
+        }
+    </script>
+</header>
+
+
+
+
+
+<title>asdas</title>
+<section id="content">
+    <h2>Temukan artikel | <a href="/tags">🏷 tags</a></h2>
+    <input type="text" id="search" v-model="query" class="boxSearch search" placeholder="Cari artikel..">
+    <br><br>
+
+    <li v-for="item in filteredItems">
+        <a v-bind:href="item.link"> ${ item.title } </a>
+     </li>
+</section>
+
+<p> Lainnya: <a href="#">Baca Blog terbaru</a>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"> </script>
+<script>
+
+(async () => {
+    const res = await fetch('/index.json');
+    const itemsRaw = await res.json();
+    const items = itemsRaw.data
+    console.log(items)
+
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    var _query = urlParams.has('q') ? urlParams.get('q') : ""
+
+    new Vue({
+        delimiters: ['${', '}'],
+        el: '#content',
+        data: {
+            items: items,
+            query: _query
+        },
+        computed: {
+            filteredItems: function() {
+                let itemWithFilter = this.items.filter((item) => {
+                    return item.title.toLowerCase().includes(this.query.toLowerCase())
+                })
+
+                return itemWithFilter
+            }
+        }
+    })
+})();
+
+</script>
+
+
+
+    <hr><br>
+    <a href="/">&lt;&lt; Kembali ke Halaman Awal</a>
+
+</body>
+</html>
+

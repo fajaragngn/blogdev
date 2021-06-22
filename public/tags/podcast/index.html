@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title> podcast </title>
+    <meta name="description" content="Menulis dengan ☕️" property="og:description">
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@fajaragngn" />
+    <meta name="twitter:creator" content="@fajaragngn" />
+
+    <meta name="twitter:url" content="https://fajarr.space/tags/podcast/">
+    <meta name="twitter:description" content="Menulis dengan ☕️">
+    <meta name="twitter:image:src" content="https://i.ibb.co/DCwqZCM/typewriter.jpg" />
+
+    <meta property="og:url" content="https://fajarr.space/tags/podcast/" />
+    
+    <meta property="og:description" content="Menulis dengan ☕️" />
+    <meta property="og:image" content="https://i.ibb.co/DCwqZCM/typewriter.jpg" />
+
+        <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98864351-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-98864351-2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+	<div>
+		<a href="/">fajarr.space</a>
+	</div>
+	  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+        <a>🦇dark/</a>
+      </div>
+    <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+      <a>/light💡</a>
+    </div>
+  </div>
+
+    <script>
+        
+        if(localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true)
+        }
+
+        function setDarkMode(isDark) {
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+
+            if(isDark) {
+                lightBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme', 'dark');
+            } else {
+                lightBtn.style.display = "none"
+                darkBtn.style.display = "block"
+                localStorage.removeItem('preferredTheme');
+            }
+
+            document.body.classList.toggle("darkmode");
+        }
+    </script>
+</header>
+
+
+
+
+
+<main>
+    <ul id="post">
+        
+        <div class="posts">
+            <h3 class="title"> <a href="https://fajarr.space/jadi-sapi-warna-ungu/"> Jadi sapi warna ungu </a></h3>
+            <p class="desc">pernah ga kamu jalan-jalan ke peternakan, disana kita bisa lihat sapi bewarna coklat, atau putih hitam, atau sejenisnya. Bayangkan jika kita menemukan sapi warna ungu, hmm ada ga ya? Rata-rata sapi warna nya kan hitam-putih, Kalau ada mungkin kita langsung kaget, foto foto selfie dan langsung cerita ke orang lain,
+sekarang coba bayangkan diri kamu menjadi seperti sapi ungu, kamu akan menjadi pusat perhatian, semua orang akan fokus melihat kamu, mengapa?</p>
+        </div>
+        
+        <div class="posts">
+            <h3 class="title"> <a href="https://fajarr.space/baik-ke-orang/"> Baik ke orang </a></h3>
+            <p class="desc">Dimulai dari yg terkecil. Ketika ada permasalahan kecil, kita datang sebagai pemecah masalah. Ketika ada orang yang sedang kesusahan, kita membantu. Dari hal kecil terlebih dahulu, kita sudah menjadi manusia yang berguna bagi orang lain.
+buatlah dirimu berguna buat orang banyak. apalah arti hidup jika hanya mementingkan diri sendiri.</p>
+        </div>
+        
+        <div class="posts">
+            <h3 class="title"> <a href="https://fajarr.space/distraksi-saat-belajar/"> Distraksi saat belajar </a></h3>
+            <p class="desc">kamu sedang belajar karna besok ada ujian, lalu kamu search materi2 yg tidak tertulis dibuku kamu menggunakan hp, tiba tiba perhatian mu teralih oleh yt karna tertarik dengan vidio terbaru/yg sedang viral, alhasil kamu tidak jadi searching dan yaa, kamu sedang distraksi&hellip;.
+tgl 12 februari kemaren podcast fan podcast ganti nama jadi selembarkertas podcast. “knp sih ganti nama?” jadi awal juni 2019 gw bikin podcast, ini tuh gak langsung instan jadi gitu, jadi pertama nya tuh gw bikin bukan fanpodcast nama nya tapi ngopiyuk!</p>
+        </div>
+        
+        <div class="posts">
+            <h3 class="title"> <a href="https://fajarr.space/tentukan-pilihan/"> Tentukan pilihan </a></h3>
+            <p class="desc">disaat kamu mulai putus asa apa yg akan kamu lakukan? mungkin sebagian besar orang memilih untuk tidak menyerah dan mulai mencoba lagi, ada juga sebagian kecil orang yg berfikir untuk mengakhiri hidupnya dikarenakan atas penderitaan yg telah melanda hidupnya, disaat kamu ujian sekolah dan kamu tidak bisa mengerjakan soal karna tidak belajar, apa yg akan kamu lakukan? mungkin ada yg mengasal atau pilihan alternatif nya yaitu mencotek, itu semua adalah pilihan.</p>
+        </div>
+        
+    </ul>
+</main>
+
+
+
+    <hr><br>
+    <a href="/">&lt;&lt; Kembali ke Halaman Awal</a>
+
+</body>
+</html>
+

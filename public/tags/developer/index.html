@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title> developer </title>
+    <meta name="description" content="Menulis dengan ☕️" property="og:description">
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@fajaragngn" />
+    <meta name="twitter:creator" content="@fajaragngn" />
+
+    <meta name="twitter:title" content="developer | @fajaragngn ">
+    <meta name="twitter:url" content="https://fajarr.space/tags/developer/">
+    <meta name="twitter:description" content="Menulis dengan ☕️">
+    <meta name="twitter:image:src" content="https://fajars.space/img/featured-img/writer.jpg" />
+
+    <meta property="og:url" content="https://fajarr.space/tags/developer/" />
+    <meta property="og:title" content="developer | @fajaragngn " />
+    <meta property="og:description" content="Menulis dengan ☕️" />
+    <meta property="og:image" content="https://fajars.space/img/featured-img/writer.jpg" />
+
+        <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98864351-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-98864351-2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+	<div>
+		<a href="/">/fajarr.space</a>
+	</div>
+	  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+        <a>dark/</a>
+      </div>
+    <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+      <a>/light</a>
+    </div>
+  </div>
+
+    <script>
+        
+        if(localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true)
+        }
+
+        function setDarkMode(isDark) {
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+
+            if(isDark) {
+                lightBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme', 'dark');
+            } else {
+                lightBtn.style.display = "none"
+                darkBtn.style.display = "block"
+                localStorage.removeItem('preferredTheme');
+            }
+
+            document.body.classList.toggle("darkmode");
+        }
+    </script>
+</header>
+
+
+
+
+
+<main>
+    <ul id="post">
+        
+        <div class="posts">
+            <h3 class="title"> <a href="https://fajarr.space/dev/fix-build-failed-os-x-11.0.1-using-python-build-20180424/"> Fix BUILD FAILED (OS X 11.0.1 bigsur using python-build 20180424) </a></h3>
+            <p class="desc">➜ brew install zlib openssl readline
+CFLAGS=&quot;-I$(brew &ndash;prefix openssl)/include -I$(brew &ndash;prefix readline)/include -I$(xcrun &ndash;show-sdk-path)/usr/include&quot;
+LDFLAGS=&quot;-L$(brew &ndash;prefix openssl)/lib -L$(brew &ndash;prefix readline)/lib -L$(brew &ndash;prefix zlib)/lib&quot;
+Warning: zlib 1.2.11 is already installed and up-to-date
+To reinstall 1.2.11, run brew reinstall zlib
+Warning: openssl@1.1 1.1.1g is already installed and up-to-date
+To reinstall 1.1.1g, run brew reinstall openssl@1.1
+Warning: readline 8.0.4 is already installed and up-to-date
+To reinstall 8.0.4, run brew reinstall readline</p>
+        </div>
+        
+        <div class="posts">
+            <h3 class="title"> <a href="https://fajarr.space/dev/run-python-in-sublime-text-3-with-terminus/"> Menjalankan python di sublime text 3 dengan terminus </a></h3>
+            <p class="desc">sebelum itu install terlebih dahulu python di windows/pyenv di mac
+Install terminus di package control
+klik tools -&gt; build system -&gt; new build systems lalu save
+copy script dibawah ini:
+{
+&quot;target&quot;: &quot;terminus_exec&quot;, &quot;cancel&quot;: &quot;terminus_cancel_build&quot;, &quot;focus&quot;: true, &quot;shell_cmd&quot;: &quot;/usr/bin/env python3 ${file}&quot;, &quot;file_regex&quot;: &quot;^\[ \]*File \\&quot;(...*?)\\&quot;, line (\[0-9\]*)&quot;, &quot;selector&quot;: &quot;source.python&quot;, &quot;env&quot;: {&quot;PYTHONIOENCODING&quot;: &quot;utf-8&quot;}, &quot;variants&quot;: \[ { &quot;name&quot;: &quot;Syntax Check&quot;, &quot;shell_cmd&quot;: &quot;python -m py_compile \\&quot;${file}\\&quot;&quot;, } \]  }
+save, lalu jalankan cmd+b, untuk menutup pane jalankan cmd+w</p>
+        </div>
+        
+    </ul>
+</main>
+
+
+
+    <hr><br>
+    <a href="/">&lt;&lt; Kembali ke Halaman Awal</a>
+
+</body>
+</html>
+

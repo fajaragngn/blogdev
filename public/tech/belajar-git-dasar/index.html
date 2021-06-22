@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title> Belajar Git dasar </title>
+    <meta name="description" content="Git adalah salah satu sistem pengontrol versi(Version Control System) pada proyek perangkat lunak yang diciptakan Linus Torvalds." property="og:description">
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@fajaragngn" />
+    <meta name="twitter:creator" content="@fajaragngn" />
+
+    <meta name="twitter:title" content="Belajar Git dasar | @fajaragngn ">
+    <meta name="twitter:url" content="https://fajarr.space/tech/belajar-git-dasar/">
+    <meta name="twitter:description" content="Git adalah salah satu sistem pengontrol versi(Version Control System) pada proyek perangkat lunak yang diciptakan Linus Torvalds.">
+    <meta name="twitter:image:src" content="https://fajars.space/img/featured-img/writer.jpg" />
+
+    <meta property="og:url" content="https://fajarr.space/tech/belajar-git-dasar/" />
+    <meta property="og:title" content="Belajar Git dasar | @fajaragngn " />
+    <meta property="og:description" content="Git adalah salah satu sistem pengontrol versi(Version Control System) pada proyek perangkat lunak yang diciptakan Linus Torvalds." />
+    <meta property="og:image" content="https://fajars.space/img/featured-img/writer.jpg" />
+
+        <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98864351-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-98864351-2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+	<div>
+		<a href="/">/@fajar.agngn</a>
+	</div>
+	  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+        <a>dark/</a>
+      </div>
+    <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+      <a>/light</a>
+    </div>
+  </div>
+
+    <script>
+        
+        if(localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true)
+        }
+
+        function setDarkMode(isDark) {
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+
+            if(isDark) {
+                lightBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme', 'dark');
+            } else {
+                lightBtn.style.display = "none"
+                darkBtn.style.display = "block"
+                localStorage.removeItem('preferredTheme');
+            }
+
+            document.body.classList.toggle("darkmode");
+        }
+    </script>
+</header>
+
+
+
+
+
+<main id="single">
+    <h1 class="titles">Belajar Git dasar</h1>
+    <article id="content"><p><img src="https://miro.medium.com/max/1200/1*BCZkmZR1_YzDZy22Vn4uUw.png#git-img-main" alt="git logo"></p>
+<h1 id="apa-itu-git-">Apa itu Git ?</h1>
+<ul>
+<li>Git adalah salah satu sistem pengontrol versi(Version Control System) pada proyek perangkat lunak yang diciptakan Linus Torvalds.</li>
+<li>Pengontrol versi bertugas memcatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri.</li>
+<li>Git dikenal juga dengan distributed revision control (VCS terdistribusi), artinya penyimpanan database Git tidak hanya berada dalam satu tempat saja.</li>
+</ul>
+<h1 id="instalasi-git">Instalasi Git</h1>
+<ul>
+<li>
+<p>Download <strong>Git</strong>, Buka website resminya Git <a href="https://git-scm.com">git-scm.com</a>.</p>
+</li>
+<li>
+<p>Kemudian unduh Git sesuai dengan arsitektur komputer kita. Kalau menggunakan 64bit, unduh yang 64bit. Begitu juga kalau menggunakan 32bit.</p>
+</li>
+<li>
+<p>Untuk pengguna linux <code>sudo apt-get install git</code> &amp; untuk Mac <code>brew install git</code></p>
+</li>
+<li>
+<p>Selamat, Git sudah terinstal. Untuk mencobanya,silahkan buka <strong>Terminal</strong> atau <strong>CMD</strong>,kemudian ketik perintah</p>
+<p><code>git --version.</code></p>
+<p><img src="/img/git/1.png" alt="git &ndash;version"></p>
+</li>
+</ul>
+<h1 id="menambahkan-global-config">Menambahkan Global Config</h1>
+<ul>
+<li>
+<p>Pada saat pertama kali menggunakan git, perlu dilakukan konfigurasi
+user.name dan user.email</p>
+</li>
+<li>
+<p>konfigurasi ini bisa dilakukan untuk global repostiry atau individual
+repository.</p>
+</li>
+<li>
+<p>apabila belum dilakukan konfigurasi, akan mengakibatkan terjadi
+kegagalan saat menjalankan perintah <code>git commit</code></p>
+</li>
+<li>
+<p>Config Global Repository</p>
+<p><code>$ git config --global user.name &quot;nama_user&quot;</code></p>
+<p><code>$ git config --global user.email &quot;nama_user&quot;</code></p>
+</li>
+</ul>
+<h1 id="perintah-dasar-git">Perintah Dasar Git</h1>
+<ul>
+<li><code>git init</code> , perintah untuk membuat repository local</li>
+<li><code>git add</code>, perintah untuk menambahkan file baru, atau perubahan pada file
+pada staging sebelum proses commit.</li>
+<li><code>git commit</code>, perintah untuk menyimpan perubahan kedalam database git.</li>
+<li><code>git push -u origin master</code>, perintah untuk mengirim perubahan pada repository local menuju server repository.</li>
+<li><code>git clone [url]</code>, perintah untuk membuat working directory yang diambil dari repositry sever.</li>
+<li><code>git remote add origin [url]</code>, perintah untuk menambahkan remote server/reopsitory server pada local repositry (working directory)</li>
+<li><code>git pull</code>, perintah untuk mengambil/mendownload perubahan terbaru dari server repository ke local repository</li>
+</ul>
+<h1 id="membuat-reposiory-local">Membuat Reposiory Local</h1>
+<ul>
+<li>
+<p>Buka direktory aktif, misal: &lsquo;/Documents/GitHub/&rsquo;</p>
+</li>
+<li>
+<p>Drop direktori ke terminal / CMD</p>
+</li>
+<li>
+<p>Buat direktory project praktikum pertama dengan nama LatihanVCS</p>
+<p><code>$ mkdir LatihanVCS</code></p>
+<p><code>$ cd LatihanVCS</code></p>
+<p><img src="/img/git/3.png" alt="create folder"></p>
+</li>
+<li>
+<p>Sehingga terbentuk satu direktori baru dibawahnya, selanjutnya masuk kedalam direktori tersebut dengan perintah cd (change directory)</p>
+</li>
+<li>
+<p>direktory aktif menjadi: /Documents/GitHub/LatihanVCS</p>
+</li>
+<li>
+<p>Jalankan perintah git init, untuk membuat repository local.
+<code>$ git init</code></p>
+</li>
+<li>
+<p>Repository baru berhasil di inisialisasi, dengan terbentuknya satu direktori hidden dengan nama .git</p>
+</li>
+<li>
+<p>Pada direktori tersebut, semua perubahan pada working directory akan disimpan.</p>
+</li>
+</ul>
+<h1 id="menambahkan-file-baru-pada-repository">Menambahkan File baru pada repository</h1>
+<ul>
+<li>
+<p>Untuk membuat file dapat menggunakan text editor, lalu menyimpan filenya pada direktori aktif (repository)</p>
+</li>
+<li>
+<p>disini kita akan coba buat satu file bernama README.md (text file)</p>
+<p><code>$ echo “# LatihanVCS” &gt;&gt; README.md</code></p>
+</li>
+<li>
+<p>File README.md berhasil dibuat.</p>
+<p><img src="/img/git/4.png" alt="readme.md created"></p>
+</li>
+</ul>
+<h1 id="menambahkan-file-baru-pada-repository-1">Menambahkan File baru pada repository</h1>
+<ul>
+<li>
+<p>Untuk menambahkan file yang baru saja dibuat tersebut gunakan perintah git add.</p>
+<p><code>$ git add README.md</code></p>
+</li>
+<li>
+<p>File README.md berhasil ditambahkan.</p>
+</li>
+</ul>
+<h1 id="commit-menyimpan-perubahan-ke-database">Commit (Menyimpan perubahan ke database)</h1>
+<ul>
+<li>
+<p>Untuk menyimpan perubahan yang ada kedalam database repository local, gunakan perintah</p>
+<p><code>$ git commit -m 'commit pertama'</code></p>
+</li>
+<li>
+<p>Perubahan berhasil disimpan.</p>
+<p><img src="/img/git/5.png" alt="commit pertama"></p>
+</li>
+</ul>
+<h1 id="membuat-repository-server">Membuat repository server</h1>
+<ul>
+<li>
+<p>Server reopsitory yang akan kita gunakan adalah <a href="http://github.com">http://github.com</a>, Anda harus membuat akun terlebih dahulu.</p>
+</li>
+<li>
+<p>Pada laman github, klik tombol start a project, atau</p>
+</li>
+<li>
+<p>Dari menu (icon +) klik New Repository</p>
+<p><img src="/img/git/6.png" alt="new repo"></p>
+</li>
+</ul>
+<h1 id="membuat-repository-server-1">Membuat repository server</h1>
+<ul>
+<li>
+<p>Isi nama repository nya, &lsquo;LatihanVCS&rsquo;</p>
+</li>
+<li>
+<p>lalu klik tombol Create repository</p>
+<p><img src="/img/git/7.png" alt="create repo"></p>
+</li>
+</ul>
+<h1 id="menambahkan-remote-repository">Menambahkan Remote Repository</h1>
+<ul>
+<li>
+<p>Remote Repository merupakan repository server yang akan digunakan untuk menyimpan setiap perubahan pada local repository, sehingga dapat diakses oleh banyak user.</p>
+</li>
+<li>
+<p>Untuk menambahkan remote repository server, gunakan perintah git remote add origin [url]</p>
+<p><code>$ git remote add origin https://github.com/fajarbaiz/LatihanVCS.git</code></p>
+</li>
+</ul>
+<h1 id="push-mengirim-perubahan-ke-server">Push (Mengirim perubahan ke server)</h1>
+<ul>
+<li>
+<p>Untuk mengirim perubahan pada local repository ke server gunakan perintah git push.</p>
+<p><code>$ git push -u origin master</code></p>
+</li>
+<li>
+<p>Perintah ini akan meminta memasukkan username dan password pada akun github.com</p>
+<p><img src="/img/git/8.png" alt="push"></p>
+</li>
+</ul>
+<h1 id="lihat-hasilnya-pada-server-repository">Lihat hasilnya pada server repository</h1>
+<ul>
+<li>
+<p>Buka laman github.com, arahkan pada repositori- nya.</p>
+</li>
+<li>
+<p>Maka perubahan akan terlihat pada laman tersebut.</p>
+<p><img src="/img/git/9.png" alt="rexona percaya"></p>
+</li>
+</ul>
+<h1 id="clone-repository">Clone Repository</h1>
+<ul>
+<li>
+<p>Clone repository, pada dasarnya adalah meng-copy repository server dan secara otomatis membuat satu direktory sesuai dengan nama repositorynya (working directory).</p>
+</li>
+<li>
+<p>Untuk melakukan cloning, gunakan perintah git clone [url]</p>
+<p><code>git clone https://github.com/fajarbaiz/LatihanVCS.git</code></p>
+<p><img src="/img/git/10.png" alt="clone"></p>
+</li>
+</ul>
+<h1 id="menambahkan-gambar">Menambahkan gambar</h1>
+<ul>
+<li>
+<p>Buat folder &lsquo;img&rsquo; di dalam repository local &lsquo;LatihanVCS&rsquo;</p>
+</li>
+<li>
+<p>Lalu tambahkan / copy hasil screenshot ke dalam folder &lsquo;img&rsquo;</p>
+<p><img src="/img/git/11.png" alt="create folder"></p>
+</li>
+<li>
+<p>Ketik <code>git add .</code> untuk menambahkan semua file baru</p>
+<p><img src="/img/git/12.png" alt="git add"></p>
+</li>
+<li>
+<p>Lalu commit dengan komentar &lsquo;commit kedua&rsquo;</p>
+<p><img src="/img/git/13.png" alt="commit kedua"></p>
+</li>
+<li>
+<p>Push file gambar ke repository server</p>
+<p><img src="/img/git/14.png" alt="push server"></p>
+</li>
+</ul>
+<h1 id="mengedit--merubah-isi-file-readmemd">Mengedit / merubah isi file README.md</h1>
+<ul>
+<li>
+<p>Buka repository local &lsquo;LatihanVCS&rsquo;</p>
+</li>
+<li>
+<p>Edit file README.md dengan text editor seperti notepad, dll</p>
+<p><img src="/img/git/15.png" alt="edit readme"></p>
+</li>
+<li>
+<p>Pengeditan file menggunakan bahasa markup .md, silahkan lihat dokumentasi nya <a href="https://guides.github.com/features/mastering-markdown/">disini</a></p>
+</li>
+<li>
+<p>Jika sudah klik save, lalu ketik <code>git add .</code>, <code>git commit 'commit ketiga</code> dan <code>git push -u origin master</code></p>
+<p><img src="/img/git/16.png" alt="add,commit,push"></p>
+</li>
+<li>
+<p>Lihat perubahannya di github!</p>
+<p><img src="/img/git/17.png" alt="finish"></p>
+</li>
+</ul>
+</article>
+
+    <p> ✍️ ditulis: <span> Mon Oct 12, 2020 </span></p>
+
+    
+
+    <p> 🏷 tag:
+
+      
+        <a class="tags" href="/tags/tech"><span>#tech/</span></a>
+      
+    </p>
+
+  
+    <p><a href="/search">baca tulisans lainnya 🤙</a></p>
+
+    <hr>
+</main>
+
+
+<footer>
+    <img src="/img/profile.jpg" alt="fajar" width="80" height="80" class="is-avatar img-small">
+    <p>Terima kasih sudah membaca, dengerin juga <a href="https://open.spotify.com/show/5BWnbxhBS2JqTRkphmSI0B?si=Ej7zggqYQM2B26CeWU617g&dl_branch=1&nd=1">Podcast</a> nya</p>
+</footer>
+
+
+    <script>
+        document.getElementById("title").scrollIntoView();
+    </script>
+
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://fajars-space.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+
+
+
+    <hr><br>
+    <a href="/">&lt;&lt; Kembali ke Halaman Awal</a>
+
+</body>
+</html>
+

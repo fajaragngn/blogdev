@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title> Customize terminal menggunakan iTerm, ohmyzsh&#43;powerline10k </title>
+    <meta name="description" content="percantik terminal macOS mu" property="og:description">
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@fajaragngn" />
+    <meta name="twitter:creator" content="@fajaragngn" />
+
+    <meta name="twitter:url" content="/customize-terminal-menggunakan-iterm-ohmyzsh-powerline10k/">
+    <meta name="twitter:description" content="percantik terminal macOS mu">
+    <meta name="twitter:image:src" content="https://ohmyz.sh/img/OMZLogo_BnW.png" />
+
+    <meta property="og:url" content="/customize-terminal-menggunakan-iterm-ohmyzsh-powerline10k/" />
+    
+    <meta property="og:description" content="percantik terminal macOS mu" />
+    <meta property="og:image" content="https://ohmyz.sh/img/OMZLogo_BnW.png" />
+
+        <link rel="stylesheet" href="/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98864351-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-98864351-2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+	<div>
+		<a href="/">fajarr.space</a>
+	</div>
+	  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+        <a>🦇dark/</a>
+      </div>
+    <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+      <a>/light💡</a>
+    </div>
+  </div>
+
+    <script>
+        
+        if(localStorage.getItem('preferredTheme') == 'dark') {
+            setDarkMode(true)
+        }
+
+        function setDarkMode(isDark) {
+            var darkBtn = document.getElementById('darkBtn')
+            var lightBtn = document.getElementById('lightBtn')
+
+            if(isDark) {
+                lightBtn.style.display = "block"
+                darkBtn.style.display = "none"
+                localStorage.setItem('preferredTheme', 'dark');
+            } else {
+                lightBtn.style.display = "none"
+                darkBtn.style.display = "block"
+                localStorage.removeItem('preferredTheme');
+            }
+
+            document.body.classList.toggle("darkmode");
+        }
+    </script>
+</header>
+
+
+
+
+
+<main id="single">
+    <h1 class="titles">Customize terminal menggunakan iTerm, ohmyzsh&#43;powerline10k</h1>
+    <article id="content"><ol>
+<li>
+<p>Download <a href="https://iterm2.com/">iterm2</a></p>
+</li>
+<li>
+<p>Install <a href="https://ohmyz.sh/">ohmyzsh</a> menggunakan brew atau lainnya (lihat di dokumentasi ohmyzsh)</p>
+</li>
+<li>
+<p>Buka iterm Go to Preferences - profile - color lalu import color preset <a href="https://github.com/fajaragngn/zsh-itermcolors" title="https://github.com/fajaragngn/zsh-itermcolors">https://github.com/fajaragngn/zsh-itermcolors</a></p>
+</li>
+<li>
+<p>Go to Preferences - profile - general klik icon menjadi built-in icon</p>
+</li>
+<li>
+<p>Install theme <a href="https://github.com/romkatv/powerlevel10k">powerline10k</a> (Lihat dokumentasi di github)</p>
+</li>
+<li>
+<p>Config ketik <strong>nano ~/.zshrc</strong> ubah <strong>ZSH_THEME=&ldquo;apa ini saya lupa:V&rdquo;</strong> menjadi <strong>ZSH_THEME=&ldquo;powerlevel10k/powerlevel10k&rdquo;</strong></p>
+</li>
+<li>
+<p>Save, lalu restart iterm</p>
+</li>
+<li>
+<p>Ikuti konfigurasi yang di berikan dan selesai.</p>
+</li>
+<li>
+<p>Untuk konfigurasi ulang ketik p10k configure</p>
+<p><img src="https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/configuration-wizard.gif" alt=""></p>
+</li>
+</ol>
+</article>
+
+    <p> ✍️ ditulis: <span> Sat Jun 19, 2021 </span></p>
+
+    
+
+    <p> 👉 <a href="/tags">tag:</a>
+
+      
+        <a class="tags" href="/tags/dev"><span>#dev/</span></a>
+      
+    </p>
+
+  
+    <p><a href="/tulisan">baca tulisans lainnya 🤙</a></p>
+
+    <hr>
+</main>
+
+
+<footer>
+    <p>Terima kasih sudah membaca, baca juga blog <a href="https://fajarr.space">saya</a> nya</p>
+</footer>
+
+
+    <script>
+        document.getElementById("title").scrollIntoView();
+    </script>
+
+                            
+
+
+
+    <hr><br>
+    <a href="/">&lt;&lt; Kembali ke Halaman Awal</a>
+
+</body>
+</html>
+
