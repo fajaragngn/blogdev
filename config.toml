@@ -1,0 +1,39 @@
+baseURL = ""
+languageCode = "en-us"
+title = "JurnalDev"
+theme = "yinyang"
+DefaultContentLanguage = "id"
+
+[author]
+  name = "jurnalDev"
+  homepage = "https://fajarr.space/"
+
+[languages]
+  [languages.id]
+    contentDir = "content/id"
+    languageName = "Id"
+    weight = 1
+  [languages.en]
+    contentDir = "content/en"
+    languageName = "En"
+    weight = 1
+
+[permalinks]
+  posts = '/:slug/'
+
+[params]
+disqus = "joway" # disqus account name
+extraHead = ''
+mainSections = ["posts"]
+
+[[params.socials]]
+name = "RSS"
+link = "/index.xml"
+
+[[params.socials]]
+name = "Blog"
+link = "https://fajarr.space"
+
+[[params.socials]]
+name = "Podcast"
+link = "https://selembarkertas.netlify.app"
