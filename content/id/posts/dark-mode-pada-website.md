@@ -12,8 +12,7 @@ title = "Dark mode pada website"
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <head> 
-</head>
-<link rel="stylesheet" type="text/css" href="assets/css/main.css"> 
+</head> 
 <body>
   <style>
     body{
@@ -77,6 +76,27 @@ title = "Dark mode pada website"
 
 <h1>Hi there.</h1> 
 
-<script type="text/javascript" src="assets/js/main.js"></script> 
+<script>
+  if(localStorage.getItem('preferredTheme') == 'dark') {
+    setDarkMode(true)
+}
+
+function setDarkMode(isDark) {
+    var darkBtn = document.getElementById('darkBtn')
+    var lightBtn = document.getElementById('lightBtn')
+
+    if(isDark) {
+        lightBtn.style.display = "block"
+        darkBtn.style.display = "none"
+        localStorage.setItem('preferredTheme', 'dark');
+    } else {
+        lightBtn.style.display = "none"
+        darkBtn.style.display = "block"
+        localStorage.removeItem('preferredTheme');
+    }
+
+    document.body.classList.toggle("darkmode");
+}
+</script> 
 </body> 
 </html> 
