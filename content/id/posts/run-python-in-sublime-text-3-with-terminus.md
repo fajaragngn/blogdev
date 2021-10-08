@@ -1,11 +1,9 @@
 +++
 Description = "menjalankan python di sublime text"
+categories = ["docs"]
 date = 2020-11-24T17:00:00Z
 featured_image = ""
 tags = ["python", "sublime"]
-categories = [
-    "tutorial",
-]
 title = "Menjalankan python di sublime text 3 dengan terminus"
 
 +++
