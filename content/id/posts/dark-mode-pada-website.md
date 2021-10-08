@@ -11,8 +11,6 @@ title = "Dark mode pada website"
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <head> 
-</head> 
-<body>
   <style>
 
     body.darkmode {
@@ -50,6 +48,9 @@ title = "Dark mode pada website"
         cursor: pointer
     }
   </style>
+</head> 
+<body>
+  
 <header>
 <div>
 <a href="/">/@fajar.agngn</a>
