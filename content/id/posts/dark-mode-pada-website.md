@@ -7,4 +7,7 @@ tags = ["darkmode", "website"]
 title = "Dark mode pada website"
 
 +++
+
+Demo ⬇️
+
 <iframe width="100%" height="500" src="https://fajaragngn.github.io/simple-dark-mode/" title="p" frameborder="0" allowfullscreen></iframe>
