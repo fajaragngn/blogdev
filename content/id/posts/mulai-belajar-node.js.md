@@ -10,6 +10,4 @@ title = "Mulai belajar Node.js "
 +++
 Runtime environment untuk Javascript yang bersifat open-source dan cross-platform. Dengan Node.js kita dapat menjalankan kode Javascript di mana pun, tidak hanya terbatas pada browser saja
 
-### Hari pertama
-
 Install dulu node.js nya di [https://nodejs.org/](https://nodejs.org/ "sini") 
