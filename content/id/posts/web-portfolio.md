@@ -1,7 +1,7 @@
 +++
 Description = ""
 categories = ["docs"]
-date = 2018-12-31T17:00:00Z
+date = 2019-01-01T17:00:00Z
 featured_image = ""
 tags = ["portfolio", "web"]
 title = "Web portfolio"
