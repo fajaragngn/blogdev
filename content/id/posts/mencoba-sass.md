@@ -7,7 +7,7 @@ tags = ["css"]
 title = "Mencoba SASS"
 
 +++
-Pengen nyoba SASS, katanya sih buat mempercantik kode biar keliatan rapih, tapi pas nyoba malah ribet config nya 😄
+Pengen nyoba SASS, katanya sih buat mempercantik kode CSS biar keliatan rapih, tapi pas nyoba malah ribet config nya 😄
 
 tapi tetap dilanjut biar keliatan pro 🤫
 
