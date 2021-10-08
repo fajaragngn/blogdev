@@ -1,15 +1,12 @@
 +++
 Description = "cara daftar akun github"
-date = 2020-10-13
+categories = ["docs"]
+date = 2020-10-13T00:00:00Z
 featured_image = ""
 tags = ["github"]
-categories = [
-    "tutorial",
-]
 title = "Daftar akun di github"
 
 +++
-
 ![github](https://pngimg.com/uploads/github/github_PNG15.png#post-img)
 
 ## Daftar Akun
