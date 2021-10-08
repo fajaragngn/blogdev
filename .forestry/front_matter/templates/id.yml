@@ -20,3 +20,5 @@ fields:
 - type: list
   name: tags
   label: tags
+pages:
+- content/id/posts/web-portfolio.md
