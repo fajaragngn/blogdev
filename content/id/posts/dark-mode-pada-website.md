@@ -15,6 +15,52 @@ title = "Dark mode pada website"
 </head>
 <link rel="stylesheet" type="text/css" href="assets/css/main.css"> 
 <body>
+  <style>
+    body{
+      margin: 3% auto;
+      width: 60%;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      font-family: arial;
+      color: rgb(87, 87, 87);
+      background: #faf9f5;
+    }
+
+    body.darkmode {
+        background: rgb(57, 57, 57);
+        color: rgb(227, 227, 227);
+    }
+
+    a{
+        color: rgb(87, 87, 87);
+    }
+    h1{
+        text-align: center;
+        margin: 30% auto;
+    }
+    body.darkmode a{
+        color: rgb(227, 227, 227);
+    }
+
+    .is-hidden{
+        display: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    #theme {
+        font-size: 20px;
+    }
+
+    #theme:hover {
+        cursor: pointer
+    }
+  </style>
 <header>
 <div>
 <a href="/">/@fajar.agngn</a>
