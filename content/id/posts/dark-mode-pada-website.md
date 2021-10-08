@@ -44,22 +44,7 @@ title = "Dark mode pada website"
 <body>
   
 <header>
-<div>
-<a href="/">/@fajar.agngn</a>
-</div>
-<div id=theme> 
-<div onclick=setDarkMode(true) id=darkBtn> 
-<a>dark/</a> 
-</div> 
-<div onclick=setDarkMode(false) id=lightBtn class=is-hidden> 
-<a>/light</a> 
-</div> 
-</div>
-</header> 
-
-<h1>Hi there.</h1> 
-
-<script>
+  <script>
   	if(localStorage.getItem('preferredTheme') == 'dark') {
     	setDarkMode(true)
     }
@@ -80,6 +65,22 @@ title = "Dark mode pada website"
 
         document.body.classList.toggle("darkmode");
     }
-</script> 
+</script>
+<div>
+<a href="/">/@fajar.agngn</a>
+</div>
+<div id=theme> 
+<div onclick=setDarkMode(true) id=darkBtn> 
+<a>dark/</a> 
+</div> 
+<div onclick=setDarkMode(false) id=lightBtn class=is-hidden> 
+<a>/light</a> 
+</div> 
+</div>
+</header> 
+
+<h1>Hi there.</h1> 
+
+ 
 </body> 
 </html>
