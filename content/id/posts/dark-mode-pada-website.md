@@ -7,7 +7,6 @@ tags = ["darkmode", "website"]
 title = "Dark mode pada website"
 
 +++
-
 <html>
 <meta charset="UTF-8"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -15,15 +14,6 @@ title = "Dark mode pada website"
 </head> 
 <body>
   <style>
-    body{
-      margin: 3% auto;
-      width: 60%;
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-      font-family: arial;
-      color: rgb(87, 87, 87);
-      background: #faf9f5;
-    }
 
     body.darkmode {
         background: rgb(57, 57, 57);
@@ -99,4 +89,4 @@ function setDarkMode(isDark) {
 }
 </script> 
 </body> 
-</html> 
+</html>
