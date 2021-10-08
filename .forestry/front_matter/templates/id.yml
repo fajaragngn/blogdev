@@ -21,4 +21,5 @@ fields:
   name: tags
   label: tags
 pages:
+- content/id/posts/dark-mode-pada-website.md
 - content/id/posts/web-portfolio.md
