@@ -25,7 +25,7 @@ Untuk meyakinkan target untuk memberikan izin untuk mengakses cam, halaman mengg
 
   ``$ apt install git / $ brew install git``
 
-  ``$ git clone https://github.com/mrbaiz/saycheese``
+  ``$ git clone https://github.com/fajaragngn/saycheese``
 
   ``$ cd saycheese``
 
