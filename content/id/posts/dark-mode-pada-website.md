@@ -67,26 +67,26 @@ title = "Dark mode pada website"
 <h1>Hi there.</h1> 
 
 <script>
-  if(localStorage.getItem('preferredTheme') == 'dark') {
+  	if(localStorage.getItem('preferredTheme') == 'dark') {
     setDarkMode(true)
-}
-
-function setDarkMode(isDark) {
-    var darkBtn = document.getElementById('darkBtn')
-    var lightBtn = document.getElementById('lightBtn')
-
-    if(isDark) {
-        lightBtn.style.display = "block"
-        darkBtn.style.display = "none"
-        localStorage.setItem('preferredTheme', 'dark');
-    } else {
-        lightBtn.style.display = "none"
-        darkBtn.style.display = "block"
-        localStorage.removeItem('preferredTheme');
     }
 
-    document.body.classList.toggle("darkmode");
-}
+    function setDarkMode(isDark) {
+        var darkBtn = document.getElementById('darkBtn')
+        var lightBtn = document.getElementById('lightBtn')
+
+        if(isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+        } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+        }
+
+        document.body.classList.toggle("darkmode");
+    }
 </script> 
 </body> 
 </html>
