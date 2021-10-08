@@ -21,10 +21,7 @@ title = "Dark mode pada website"
     a{
         color: rgb(87, 87, 87);
     }
-    h1{
-        text-align: center;
-        margin: 30% auto;
-    }
+
     body.darkmode a{
         color: rgb(227, 227, 227);
     }
@@ -33,12 +30,7 @@ title = "Dark mode pada website"
         display: none;
     }
 
-    header{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        font-size: 20px;
-    }
+
 
     #theme {
         font-size: 20px;
