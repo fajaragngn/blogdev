@@ -7,7 +7,7 @@ tags = ["darkmode", "website"]
 title = "Dark mode pada website 🌚"
 
 +++
-Awal nya bosen punya web silau banget, ya akhirnya dibuat juga darkmode ini 
+Awal nya bosen punya web silau banget, ya akhirnya dibuat juga darkmode ini 🤠
 
 Demo ⬇️
 
