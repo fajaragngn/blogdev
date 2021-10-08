@@ -2,7 +2,8 @@
 Description = "Git adalah salah satu sistem pengontrol versi(Version Control System) pada proyek perangkat lunak yang diciptakan Linus Torvalds"
 date = 2020-10-12T00:00:00Z
 featured_image = ""
-tags = ["tutorial"]
+categories = ["docs"]
+tags = ["tutorial", "github"]
 title = "Belajar Git dasar"
 
 +++
