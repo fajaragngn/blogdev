@@ -4,7 +4,7 @@ categories = ["docs"]
 date = 2021-06-19T17:00:00Z
 featured_image = "https://ohmyz.sh/img/OMZLogo_BnW.png"
 tags = ["terminal", "iterm"]
-title = "Customize terminal menggunakan iTerm, ohmyzsh+powerline10k"
+title = "Customize iTerm menggunakan ohmyzsh+powerline10k"
 
 +++
 1. Download [iterm2](https://iterm2.com/)
