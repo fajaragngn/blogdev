@@ -68,7 +68,7 @@ title = "Dark mode pada website"
 
 <script>
   	if(localStorage.getItem('preferredTheme') == 'dark') {
-    setDarkMode(true)
+    	setDarkMode(true)
     }
 
     function setDarkMode(isDark) {
