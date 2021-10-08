@@ -2,6 +2,7 @@
 Description = "cara daftar akun github"
 categories = ["docs"]
 date = 2020-10-13T00:00:00Z
+draft = true
 featured_image = ""
 tags = ["github"]
 title = "Daftar akun di github"
