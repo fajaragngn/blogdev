@@ -4,7 +4,7 @@ categories = ["tutorial"]
 date = 2021-11-06T17:00:00Z
 featured_image = "/uploads/asdads.png"
 tags = ["docs"]
-title = "Mencoba forestry.io untuk post editor static site generator."
+title = "Mencoba forestry.io untuk post editor static site generator"
 
 +++
 Jika kamu ingin punya website pribadi/static menggunakan SSG (Static Site Generator) seperti Hugo, Jekyll, Next.js, Gatsby dll. kamu harus mencoba [forestry.io](forestry.io "forestry.io") untuk mempermudah kamu mengedit/post artikel di website, tidak perlu ribet menggunakan text editor lagi
