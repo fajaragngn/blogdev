@@ -8,3 +8,4 @@ tags = []
 title = "Mencoba forestry.io untuk post editor static site generator."
 
 +++
+Jika kamu ingin punya website pribadi/static, kamu harus mencoba SSG (Static Site Generator) seperti Hugo, Jekyll, Next.js, 
