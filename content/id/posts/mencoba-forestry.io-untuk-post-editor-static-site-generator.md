@@ -1,7 +1,7 @@
 +++
 Description = ""
 categories = []
-date = ""
+date = 2021-11-06T17:00:00Z
 draft = true
 featured_image = ""
 tags = []
