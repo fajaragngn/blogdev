@@ -22,6 +22,7 @@ fields:
   label: tags
 pages:
 - content/id/posts/dark-mode-pada-website.md
+- content/id/posts/mencoba-forestry.io-untuk-post-editor-static-site-generator.md
 - content/id/posts/mencoba-sass.md
 - content/id/posts/mulai-belajar-node.js.md
 - content/id/posts/web-portfolio.md
