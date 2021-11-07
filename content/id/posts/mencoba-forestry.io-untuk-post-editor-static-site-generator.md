@@ -1,9 +1,9 @@
 +++
 Description = "Jika kamu ingin punya website pribadi/static menggunakan SSG (Static Site Generator) seperti Hugo, Jekyll, Next.js, Gatsby dll. kamu harus mencoba forestry.io"
-categories = ["tutorial"]
+categories = ["docs"]
 date = 2021-11-06T17:00:00Z
 featured_image = "/uploads/asdads.png"
-tags = ["docs"]
+tags = ["tutorial"]
 title = "Mencoba forestry.io untuk post editor static site generator"
 
 +++
