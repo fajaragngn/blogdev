@@ -3,7 +3,7 @@ Description = "Jika kamu ingin punya website pribadi/static menggunakan SSG (Sta
 categories = ["tutorial"]
 date = 2021-11-06T17:00:00Z
 draft = true
-featured_image = ""
+featured_image = "/uploads/asdads.png"
 tags = ["docs"]
 title = "Mencoba forestry.io untuk post editor static site generator."
 
